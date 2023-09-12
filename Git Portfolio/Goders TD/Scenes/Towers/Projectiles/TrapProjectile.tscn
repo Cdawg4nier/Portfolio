@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Tower/Projectiles/TrapProjectile.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/Towers/TrapProjectile.png" type="Texture" id=2]
+
+[sub_resource type="Animation" id=2]
+resource_name = "Activate"
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+
+[node name="KinematicBody2D" type="Node2D"]
+scale = Vector2( 0.4, 0.4 )
+script = ExtResource( 1 )
+
+[node name="Attack Area" type="Area2D" parent="."]
+scale = Vector2( 1.5, 1.5 )
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Attack Area"]
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.06, 0.06 )
+texture = ExtResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite"]
+anims/Activate = SubResource( 2 )
+anims/RESET = SubResource( 3 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Trap Base Area" type="Area2D" parent="."]
+collision_layer = 32
+collision_mask = 40
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trap Base Area"]
+
+[connection signal="area_entered" from="Attack Area" to="." method="_on_Area2D_area_entered"]
+[connection signal="area_exited" from="Attack Area" to="." method="_on_Area2D_area_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

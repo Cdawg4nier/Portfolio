@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/TheFatRat & Anjulie - Close To The Sun (Official Instrumental) (320 kbps).mp3-0687ac902d3e8adc4513caf2716af9cb.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/TheFatRat & Anjulie - Close To The Sun (Official Instrumental) (320 kbps).mp3"
+dest_files=[ "res://.import/TheFatRat & Anjulie - Close To The Sun (Official Instrumental) (320 kbps).mp3-0687ac902d3e8adc4513caf2716af9cb.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
