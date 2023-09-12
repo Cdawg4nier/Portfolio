@@ -1,0 +1,98 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Assets/Game/background.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Game/Head/Placeholder_head_integumentary.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Game/Head/Placeholder_head_skeletal.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Game/Head/Placeholder_head_Muscular.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Game/Head/Placeholder_head_Nervous.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Game/Head/Placeholder_head_Cardiovascular.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/Head/Head.gd" type="Script" id=7]
+[ext_resource path="res://Assets/Game/Placeholder_brush_1.png" type="Texture" id=8]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 59.0085
+
+[sub_resource type="CircleShape2D" id=2]
+
+[node name="Head" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
+[node name="Background" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+offset = Vector2( 960, 1000 )
+
+[node name="Nervous" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Nervous"]
+texture = ExtResource( 5 )
+offset = Vector2( 960, 1000 )
+
+[node name="Cells" type="Node2D" parent="Nervous"]
+
+[node name="Skeletal" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Skeletal"]
+texture = ExtResource( 3 )
+offset = Vector2( 960, 1000 )
+
+[node name="Cells" type="Node2D" parent="Skeletal"]
+
+[node name="Cardiovascular" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Cardiovascular"]
+texture = ExtResource( 6 )
+offset = Vector2( 960, 1000 )
+
+[node name="Cells" type="Node2D" parent="Cardiovascular"]
+
+[node name="Muscular" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Muscular"]
+texture = ExtResource( 4 )
+offset = Vector2( 960, 1000 )
+
+[node name="Cells" type="Node2D" parent="Muscular"]
+
+[node name="Integumentary" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Integumentary"]
+texture = ExtResource( 2 )
+offset = Vector2( 960, 1000 )
+
+[node name="Cells" type="Node2D" parent="Integumentary"]
+
+[node name="Cells2" type="Node2D" parent="Integumentary"]
+
+[node name="Brush" type="Sprite" parent="."]
+
+[node name="Area2D" type="Area2D" parent="Brush"]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Brush/Area2D"]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Brush"]
+texture = ExtResource( 8 )
+
+[node name="GridFilterArea" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="GridFilterArea"]
+position = Vector2( 570, 284 )
+polygon = PoolVector2Array( 132, -99, 266, -186, 328, -258, 409, -268, 532, -230, 749, -162, 927, -29, 1009, 178, 1074, 501, 1063, 814, 1021, 1052, 918, 1337, 831, 1470, 684, 1655, 607, 1700, 440, 1692, 264, 1695, 72, 1677, -52, 1555, -166, 1353, -242, 989, -315, 691, -296, 494, -194, 222, -31, 17 )
+
+[node name="ScannerHead" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScannerHead"]
+shape = SubResource( 2 )
+
+[connection signal="area_entered" from="Brush/Area2D" to="." method="_on_Area2D_area_entered"]
+[connection signal="area_exited" from="Brush/Area2D" to="." method="_on_Area2D_area_exited"]
+[connection signal="area_entered" from="ScannerHead" to="." method="_on_ScannerHead_area_entered"]
+[connection signal="area_exited" from="ScannerHead" to="." method="_on_ScannerHead_area_exited"]

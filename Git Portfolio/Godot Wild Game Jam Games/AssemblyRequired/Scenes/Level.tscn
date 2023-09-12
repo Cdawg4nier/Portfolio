@@ -1,0 +1,82 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
+[ext_resource path="res://Assets/selected_machine_ring.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Machines/machine_grower.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Machines/machine_conveyor.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Machines/machine_stacker.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Machines/machine_sender.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Machines/machine_incrementer.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Machines/machine_receiver.png" type="Texture" id=8]
+
+[node name="Level" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Products" type="Node2D" parent="."]
+
+[node name="Cells" type="Node2D" parent="."]
+
+[node name="Master GUI" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Conveyor Button" type="TextureButton" parent="Master GUI"]
+margin_left = 90.0
+margin_top = 40.0
+margin_right = 190.0
+margin_bottom = 140.0
+texture_normal = ExtResource( 4 )
+
+[node name="Grower Button" type="TextureButton" parent="Master GUI"]
+margin_left = 210.0
+margin_top = 40.0
+margin_right = 310.0
+margin_bottom = 140.0
+texture_normal = ExtResource( 3 )
+
+[node name="Incrementer Button" type="TextureButton" parent="Master GUI"]
+margin_left = 330.0
+margin_top = 40.0
+margin_right = 430.0
+margin_bottom = 140.0
+texture_normal = ExtResource( 7 )
+
+[node name="Stacker Button" type="TextureButton" parent="Master GUI"]
+margin_left = 450.0
+margin_top = 40.0
+margin_right = 550.0
+margin_bottom = 140.0
+texture_normal = ExtResource( 5 )
+
+[node name="Sender Button" type="TextureButton" parent="Master GUI"]
+margin_left = 570.0
+margin_top = 40.0
+margin_right = 670.0
+margin_bottom = 140.0
+texture_normal = ExtResource( 6 )
+
+[node name="Receiver Button" type="TextureButton" parent="Master GUI"]
+margin_left = 690.0
+margin_top = 40.0
+margin_right = 790.0
+margin_bottom = 140.0
+texture_normal = ExtResource( 8 )
+
+[node name="TextureButton7" type="TextureButton" parent="Master GUI"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Selected Cell Flicker" type="Timer" parent="."]
+
+[node name="Selected Cell Ring" type="Sprite" parent="."]
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 2 )
+
+[connection signal="pressed" from="Master GUI/Conveyor Button" to="." method="_on_Conveyor_Button_pressed"]
+[connection signal="pressed" from="Master GUI/Grower Button" to="." method="_on_Grower_Button_pressed"]
+[connection signal="pressed" from="Master GUI/Incrementer Button" to="." method="_on_Incrementer_Button_pressed"]
+[connection signal="pressed" from="Master GUI/Stacker Button" to="." method="_on_Stacker_Button_pressed"]
+[connection signal="pressed" from="Master GUI/Sender Button" to="." method="_on_Sender_Button_pressed"]
+[connection signal="pressed" from="Master GUI/Receiver Button" to="." method="_on_Receiver_Button_pressed"]
+[connection signal="pressed" from="Master GUI/TextureButton7" to="." method="_on_TextureButton7_pressed"]
+[connection signal="timeout" from="Selected Cell Flicker" to="." method="_on_Selected_Cell_Flicker_timeout"]

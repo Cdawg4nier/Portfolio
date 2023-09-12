@@ -1,0 +1,734 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Assets/Game/background.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Torso/Torso.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Game/Torso/torso_integumentary.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Game/Torso/torso_muscular.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Game/Torso/torso_skeletal.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Game/Torso/torso_digestive.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Game/Torso/torso_respiratory.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Game/Torso/torso_cardiovascular.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Game/Torso/torso_nervous.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Game/Placeholder_brush_1.png" type="Texture" id=10]
+[ext_resource path="res://Scenes/Ailment1.tscn" type="PackedScene" id=11]
+
+[node name="Torso" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
+[node name="Background" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+offset = Vector2( 960, 1000 )
+
+[node name="Nervous" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Nervous"]
+texture = ExtResource( 9 )
+offset = Vector2( 960, 1000 )
+
+[node name="Ailments" type="Node2D" parent="Nervous"]
+position = Vector2( -29, 9 )
+
+[node name="Ailment7" parent="Nervous/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 968, 1099 )
+rotation = -2.83092
+scale = Vector2( 0.531, 1.137 )
+max_health = 1200
+type = 2
+
+[node name="Ailment8" parent="Nervous/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 960, 380 )
+rotation = 4.43488
+scale = Vector2( 1.32, 0.526 )
+max_health = 1200
+type = 2
+
+[node name="Ailment9" parent="Nervous/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 971, 925 )
+rotation = 0.438078
+scale = Vector2( 0.879, 1.368 )
+max_health = 1500
+
+[node name="Ailment10" parent="Nervous/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 292, 1033 )
+scale = Vector2( 0.467, 0.53 )
+max_health = 1500
+
+[node name="Ailment11" parent="Nervous/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1332, 799 )
+rotation = 0.254818
+scale = Vector2( 1.129, 0.462 )
+max_health = 2000
+
+[node name="Ailment16" parent="Nervous/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 976, 1682 )
+rotation = 1.16064
+scale = Vector2( 1.205, 0.949 )
+max_health = 1500
+type = 4
+
+[node name="Ailment17" parent="Nervous/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 955, 687 )
+rotation = 0.506145
+scale = Vector2( 0.635, 0.624 )
+max_health = 1500
+type = 4
+
+[node name="Ailment18" parent="Nervous/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 990, 1519 )
+rotation = 0.418879
+scale = Vector2( 1.058, 0.832 )
+max_health = 1500
+type = 4
+
+[node name="Ailment19" parent="Nervous/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1157, 59 )
+rotation = -0.0767945
+scale = Vector2( 0.399, 0.559 )
+max_health = 1500
+type = 4
+
+[node name="Ailment20" parent="Nervous/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 420, 403 )
+rotation = 2.7454
+scale = Vector2( 1, 0.452 )
+max_health = 1500
+type = 4
+
+[node name="Cardiovascular" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Cardiovascular"]
+texture = ExtResource( 8 )
+offset = Vector2( 960, 1000 )
+
+[node name="Ailments" type="Node2D" parent="Cardiovascular"]
+position = Vector2( -29, 9 )
+
+[node name="Ailment7" parent="Cardiovascular/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 829, 658 )
+rotation = -2.83092
+scale = Vector2( 0.531, 1.137 )
+max_health = 1200
+type = 2
+
+[node name="Ailment8" parent="Cardiovascular/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1120, 1149 )
+rotation = 4.43488
+scale = Vector2( 1.32, 0.526 )
+max_health = 1200
+type = 2
+
+[node name="Ailment9" parent="Cardiovascular/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 928, 755 )
+rotation = -0.872665
+scale = Vector2( 0.775, 1.155 )
+max_health = 1500
+
+[node name="Ailment10" parent="Cardiovascular/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 953, 663 )
+scale = Vector2( 0.928, 0.53 )
+max_health = 1500
+
+[node name="Ailment11" parent="Cardiovascular/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1155, 792 )
+rotation = 1.27933
+scale = Vector2( 1.129, 2.23 )
+max_health = 2000
+
+[node name="Ailment12" parent="Cardiovascular/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 993, 448 )
+rotation = 3.1957
+scale = Vector2( 0.583, 1.358 )
+max_health = 2000
+
+[node name="Ailment13" parent="Cardiovascular/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1094, 519 )
+rotation = -1.13446
+scale = Vector2( 0.806, 0.797 )
+max_health = 1500
+
+[node name="Ailment14" parent="Cardiovascular/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 980, 239 )
+scale = Vector2( 1.775, 1.358 )
+type = 4
+
+[node name="Ailment15" parent="Cardiovascular/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 908, 1689 )
+rotation = -0.102974
+scale = Vector2( 0.785, 1.249 )
+type = 4
+
+[node name="Ailment16" parent="Cardiovascular/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1043, 1917 )
+rotation = 0.912807
+scale = Vector2( 0.796, 0.662 )
+max_health = 1500
+type = 4
+
+[node name="Ailment17" parent="Cardiovascular/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1410, 1878 )
+rotation = 0.506145
+scale = Vector2( 0.635, 0.624 )
+max_health = 1500
+type = 4
+
+[node name="Ailment18" parent="Cardiovascular/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1039, 1366 )
+rotation = 0.418879
+scale = Vector2( 1.058, 0.832 )
+max_health = 1500
+type = 4
+
+[node name="Ailment19" parent="Cardiovascular/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1020, 589 )
+rotation = -0.0767945
+scale = Vector2( 0.932, 1.523 )
+max_health = 1500
+type = 4
+
+[node name="Ailment20" parent="Cardiovascular/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1229, 628 )
+rotation = 3.92874
+scale = Vector2( 1.445, 0.662 )
+max_health = 1500
+type = 4
+
+[node name="Respiratory" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Respiratory"]
+texture = ExtResource( 7 )
+offset = Vector2( 960, 1000 )
+
+[node name="Ailments" type="Node2D" parent="Respiratory"]
+position = Vector2( -29, 9 )
+
+[node name="Ailment7" parent="Respiratory/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 969, 418 )
+rotation = -1.67377
+scale = Vector2( 1.273, 2.643 )
+max_health = 1200
+type = 1
+
+[node name="Ailment8" parent="Respiratory/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1532, 1383 )
+rotation = -0.263545
+scale = Vector2( 2.012, 1.267 )
+max_health = 1200
+type = 1
+
+[node name="Ailment9" parent="Respiratory/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 515, 1379 )
+rotation = -0.872665
+scale = Vector2( 3.226, 1.155 )
+max_health = 1500
+type = 1
+
+[node name="Ailment10" parent="Respiratory/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 392, 957 )
+scale = Vector2( 0.928, 1.377 )
+max_health = 750
+type = 2
+
+[node name="Ailment11" parent="Respiratory/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1532, 1014 )
+rotation = 2.07694
+scale = Vector2( 1.129, 2.708 )
+type = 2
+
+[node name="Ailment12" parent="Respiratory/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1415, 1211 )
+rotation = -1.50273
+scale = Vector2( 1.279, 4.612 )
+max_health = 2000
+
+[node name="Ailment13" parent="Respiratory/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 407, 1228 )
+rotation = -1.13446
+scale = Vector2( 2.25, 1.583 )
+max_health = 1500
+
+[node name="Ailment14" parent="Respiratory/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 996, 127 )
+scale = Vector2( 0.967, 2.093 )
+max_health = 2000
+type = 2
+
+[node name="Ailment15" parent="Respiratory/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 849, 1305 )
+rotation = 2.73842
+scale = Vector2( 1.268, 2.238 )
+
+[node name="Ailment16" parent="Respiratory/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 547, 445 )
+rotation = 0.912807
+scale = Vector2( 2.337, 1.795 )
+max_health = 1500
+type = 4
+
+[node name="Ailment17" parent="Respiratory/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1304, 332 )
+rotation = 0.506145
+scale = Vector2( 1.76, 1.524 )
+max_health = 1500
+type = 4
+
+[node name="Ailment18" parent="Respiratory/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1082, 1319 )
+rotation = 0.418879
+scale = Vector2( 1.058, 0.832 )
+max_health = 1500
+type = 4
+
+[node name="Ailment19" parent="Respiratory/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1139, 636 )
+rotation = -0.0767945
+scale = Vector2( 0.932, 1.523 )
+max_health = 1500
+type = 4
+
+[node name="Ailment20" parent="Respiratory/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 930, 1068 )
+rotation = 3.05433
+scale = Vector2( 2.347, 1.523 )
+max_health = 1500
+type = 4
+
+[node name="Ailment21" parent="Respiratory/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 724, 838 )
+rotation = 1.2706
+scale = Vector2( 0.869, 1.073 )
+max_health = 1500
+type = 4
+
+[node name="Digestive" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Digestive"]
+texture = ExtResource( 6 )
+offset = Vector2( 960, 1000 )
+
+[node name="Ailments" type="Node2D" parent="Digestive"]
+position = Vector2( -29, 9 )
+
+[node name="Ailment7" parent="Digestive/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1546, 1323 )
+rotation = -1.67377
+scale = Vector2( 0.971, 1.359 )
+max_health = 1200
+type = 1
+
+[node name="Ailment8" parent="Digestive/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1463, 1213 )
+scale = Vector2( 1.358, 1.267 )
+max_health = 1200
+type = 1
+
+[node name="Ailment9" parent="Digestive/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1280, 1402 )
+rotation = -0.436332
+scale = Vector2( 3.699, 1.248 )
+max_health = 1500
+type = 1
+
+[node name="Ailment10" parent="Digestive/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 528, 1790 )
+scale = Vector2( 1.492, 4.547 )
+max_health = 1500
+type = 1
+
+[node name="Ailment11" parent="Digestive/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1127, 1841 )
+rotation = 2.07694
+scale = Vector2( 1.129, 3.493 )
+max_health = 2000
+type = 1
+
+[node name="Ailment12" parent="Digestive/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1065, 1624 )
+rotation = -1.50273
+scale = Vector2( 1.279, 4.612 )
+max_health = 2000
+type = 2
+
+[node name="Ailment13" parent="Digestive/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 670, 1131 )
+rotation = -1.13446
+scale = Vector2( 5.441, 2.415 )
+max_health = 2000
+
+[node name="Ailment14" parent="Digestive/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 816, 1890 )
+scale = Vector2( 1.591, 1.443 )
+max_health = 2000
+type = 2
+
+[node name="Ailment15" parent="Digestive/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1114, 801 )
+rotation = 2.73842
+scale = Vector2( 1.268, 2.238 )
+type = 2
+
+[node name="Ailment16" parent="Digestive/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1007, 1415 )
+rotation = 0.506145
+scale = Vector2( 1.846, 1.523 )
+max_health = 1500
+
+[node name="Ailment17" parent="Digestive/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1217, 1056 )
+rotation = 0.506145
+scale = Vector2( 1.76, 1.524 )
+max_health = 1500
+
+[node name="Ailment18" parent="Digestive/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 895, 1038 )
+rotation = 0.418879
+scale = Vector2( 2.674, 2.102 )
+max_health = 1500
+type = 4
+
+[node name="Ailment19" parent="Digestive/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 777, 1519 )
+rotation = -0.0767945
+scale = Vector2( 0.932, 1.523 )
+max_health = 1500
+type = 4
+
+[node name="Ailment20" parent="Digestive/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1529, 1595 )
+rotation = -1.86227
+scale = Vector2( 2.496, 1.523 )
+max_health = 1500
+type = 4
+
+[node name="Ailment21" parent="Digestive/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1029, 367 )
+rotation = 1.2706
+scale = Vector2( 0.746, 0.911 )
+max_health = 1500
+type = 4
+
+[node name="Skeletal" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Skeletal"]
+texture = ExtResource( 5 )
+offset = Vector2( 960, 1000 )
+
+[node name="Ailments" type="Node2D" parent="Skeletal"]
+position = Vector2( -29, 9 )
+
+[node name="Ailment7" parent="Skeletal/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 975, 1915 )
+rotation = -1.67377
+scale = Vector2( 1.116, 1.892 )
+max_health = 1200
+type = 2
+
+[node name="Ailment8" parent="Skeletal/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 764, 282 )
+scale = Vector2( 1.889, 1.344 )
+max_health = 1200
+type = 2
+
+[node name="Ailment9" parent="Skeletal/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 544, 827 )
+rotation = 0.438078
+scale = Vector2( 5.293, 1.248 )
+max_health = 1500
+
+[node name="Ailment10" parent="Skeletal/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 990, 956 )
+scale = Vector2( 2.125, 4.552 )
+max_health = 1500
+
+[node name="Ailment11" parent="Skeletal/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1343, 470 )
+rotation = 1.4207
+scale = Vector2( 1.212, 5.027 )
+max_health = 2000
+
+[node name="Ailment12" parent="Skeletal/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 985, 1556 )
+scale = Vector2( 2.665, 2.789 )
+max_health = 2000
+
+[node name="Ailment13" parent="Skeletal/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 776, 1146 )
+scale = Vector2( 2.22, 2.071 )
+type = 4
+
+[node name="Ailment14" parent="Skeletal/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1066, 1290 )
+scale = Vector2( 1.591, 1.443 )
+max_health = 2000
+type = 4
+
+[node name="Ailment15" parent="Skeletal/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1500, 214 )
+rotation = 2.18515
+scale = Vector2( 1.268, 2.238 )
+max_health = 2500
+type = 4
+
+[node name="Ailment16" parent="Skeletal/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 525, 617 )
+rotation = 0.506145
+scale = Vector2( 3.859, 1.523 )
+max_health = 1500
+type = 4
+
+[node name="Ailment17" parent="Skeletal/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1404, 877 )
+rotation = 0.506145
+scale = Vector2( 1.053, 0.831 )
+max_health = 1500
+type = 4
+
+[node name="Ailment18" parent="Skeletal/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 816, 510 )
+rotation = 0.106465
+scale = Vector2( 2.477, 1.523 )
+max_health = 1500
+type = 4
+
+[node name="Ailment19" parent="Skeletal/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 667, 1494 )
+rotation = 0.579449
+scale = Vector2( 0.932, 1.523 )
+max_health = 1500
+type = 4
+
+[node name="Ailment20" parent="Skeletal/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1600, 1459 )
+rotation = -0.481711
+scale = Vector2( 2.496, 1.523 )
+max_health = 1500
+type = 4
+
+[node name="Ailment21" parent="Skeletal/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1051, 105 )
+rotation = 1.2706
+scale = Vector2( 0.981, 1.523 )
+max_health = 1500
+type = 4
+
+[node name="Muscular" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Muscular"]
+texture = ExtResource( 4 )
+offset = Vector2( 960, 1000 )
+
+[node name="Ailments" type="Node2D" parent="Muscular"]
+position = Vector2( -29, 9 )
+
+[node name="Ailment1" parent="Muscular/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1192, 1785 )
+rotation = 0.966912
+scale = Vector2( 4.328, 1.847 )
+max_health = 2000
+type = 1
+
+[node name="Ailment2" parent="Muscular/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 713, 1069 )
+rotation = -0.116937
+scale = Vector2( 4.032, 3.008 )
+max_health = 2500
+type = 1
+
+[node name="Ailment3" parent="Muscular/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1423, 1039 )
+scale = Vector2( 2.244, 2.94 )
+max_health = 2000
+type = 1
+
+[node name="Ailment4" parent="Muscular/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 802, 1773 )
+rotation = 2.17992
+scale = Vector2( 1.886, 3.629 )
+max_health = 1750
+type = 1
+
+[node name="Ailment5" parent="Muscular/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 930, 851 )
+rotation = 0.806342
+scale = Vector2( 1.487, 3.062 )
+max_health = 1750
+type = 2
+
+[node name="Ailment6" parent="Muscular/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1165, 843 )
+rotation = 0.326377
+scale = Vector2( 5.312, 1 )
+max_health = 2000
+type = 2
+
+[node name="Ailment7" parent="Muscular/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 521, 1487 )
+rotation = -1.67377
+scale = Vector2( 9.267, 1.892 )
+max_health = 3000
+type = 2
+
+[node name="Ailment8" parent="Muscular/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1397, 1637 )
+scale = Vector2( 1.889, 1.344 )
+max_health = 1200
+type = 2
+
+[node name="Ailment9" parent="Muscular/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 470, 647 )
+rotation = 0.438078
+scale = Vector2( 5.293, 1.248 )
+max_health = 3000
+
+[node name="Ailment10" parent="Muscular/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 771, 1404 )
+rotation = -0.218166
+scale = Vector2( 6.062, 4.671 )
+max_health = 3500
+
+[node name="Ailment11" parent="Muscular/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1332, 451 )
+rotation = 1.4207
+scale = Vector2( 1.212, 5.027 )
+max_health = 2000
+
+[node name="Ailment12" parent="Muscular/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1674, 1465 )
+rotation = -0.218166
+scale = Vector2( 2.665, 2.049 )
+max_health = 2000
+
+[node name="Ailment13" parent="Muscular/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1247, 656 )
+scale = Vector2( 2.22, 2.071 )
+type = 4
+
+[node name="Ailment14" parent="Muscular/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1185, 1445 )
+scale = Vector2( 2.458, 3.398 )
+max_health = 2000
+type = 4
+
+[node name="Ailment15" parent="Muscular/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 746, 563 )
+rotation = 0.656244
+scale = Vector2( 3.706, 2.238 )
+max_health = 2500
+type = 4
+
+[node name="Ailment16" parent="Muscular/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1180, 1140 )
+rotation = 0.506145
+scale = Vector2( 3.859, 1.523 )
+max_health = 1500
+type = 4
+
+[node name="Integumentary" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Integumentary"]
+texture = ExtResource( 3 )
+offset = Vector2( 960, 1000 )
+
+[node name="Ailments" type="Node2D" parent="Integumentary"]
+
+[node name="Ailment1" parent="Integumentary/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 382, 1210 )
+rotation = 1.4207
+scale = Vector2( 5.979, 1.242 )
+max_health = 2500
+type = 1
+
+[node name="Ailment2" parent="Integumentary/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 518, 1728 )
+rotation = -0.116937
+scale = Vector2( 4.032, 3.008 )
+max_health = 3000
+type = 1
+
+[node name="Ailment3" parent="Integumentary/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1228, 393 )
+scale = Vector2( 4.074, 2.94 )
+max_health = 2500
+type = 1
+
+[node name="Ailment4" parent="Integumentary/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1503, 1542 )
+rotation = 0.764454
+scale = Vector2( 1.886, 3.629 )
+max_health = 1500
+type = 1
+
+[node name="Ailment5" parent="Integumentary/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1753, 681 )
+scale = Vector2( 1.206, 3.062 )
+max_health = 1250
+type = 2
+
+[node name="Ailment6" parent="Integumentary/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1191, 850 )
+rotation = 0.436332
+scale = Vector2( 3.852, 1 )
+max_health = 1250
+type = 2
+
+[node name="Ailment7" parent="Integumentary/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1479, 1853 )
+rotation = -0.101229
+scale = Vector2( 4.56, 2.174 )
+max_health = 1750
+type = 2
+
+[node name="Ailment8" parent="Integumentary/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 961, 1785 )
+scale = Vector2( 1.36, 1.344 )
+max_health = 2000
+type = 2
+
+[node name="Ailment9" parent="Integumentary/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 766, 732 )
+rotation = -0.436332
+scale = Vector2( 2.675, 1.248 )
+
+[node name="Ailment10" parent="Integumentary/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 858, 1283 )
+scale = Vector2( 3.889, 2.73 )
+max_health = 1500
+
+[node name="Ailment11" parent="Integumentary/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 544, 362 )
+rotation = 0.87441
+scale = Vector2( 3.079, 5.027 )
+max_health = 2000
+
+[node name="Ailment12" parent="Integumentary/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1390, 621 )
+rotation = -0.218166
+scale = Vector2( 4.573, 2.049 )
+max_health = 1500
+
+[node name="Ailment13" parent="Integumentary/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1164, 1056 )
+type = 4
+
+[node name="Ailment14" parent="Integumentary/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 835, 1597 )
+scale = Vector2( 1.2, 1.2 )
+type = 4
+
+[node name="Ailment15" parent="Integumentary/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 324, 676 )
+scale = Vector2( 1.82, 1.389 )
+max_health = 1500
+type = 4
+
+[node name="Ailment16" parent="Integumentary/Ailments" instance=ExtResource( 11 )]
+position = Vector2( 1352, 1233 )
+rotation = -0.436332
+scale = Vector2( 3.859, 1.523 )
+max_health = 1500
+type = 4
+
+[node name="Brush" type="Sprite" parent="."]
+texture = ExtResource( 10 )
