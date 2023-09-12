@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://dm7cpg3ceutwx"]
+
+[ext_resource type="Script" path="res://Scenes/Maps/World 1 - Human/Map 1-1.gd" id="1_x36ur"]
+[ext_resource type="PackedScene" uid="uid://bcvoi33k54x0v" path="res://Scenes/Enemies/Factory.tscn" id="2_1ca18"]
+[ext_resource type="Texture2D" uid="uid://dwf8jyumlqds2" path="res://Assets/Sprites/Background_Placeholder.png" id="2_hfwde"]
+[ext_resource type="PackedScene" uid="uid://ihwv2oyitns" path="res://Scenes/Player/Elements/Base_Cell.tscn" id="3_y8t5q"]
+
+[node name="Map 1-1" type="Node2D"]
+script = ExtResource("1_x36ur")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(2497, 2502)
+scale = Vector2(5, 5)
+texture = ExtResource("2_hfwde")
+
+[node name="Grid Slots" type="Node" parent="."]
+
+[node name="Player" type="Node" parent="."]
+
+[node name="Base_Cell" parent="Player" instance=ExtResource("3_y8t5q")]
+position = Vector2(3150, 1550)
+initial_cell = true
+
+[node name="Factories" type="Node" parent="."]
+
+[node name="Factory_1" parent="Factories" instance=ExtResource("2_1ca18")]
+position = Vector2(105, 227)

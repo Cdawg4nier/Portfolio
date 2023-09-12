@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://t2aav07jwex8"]
+
+[ext_resource type="Script" path="res://Scenes/Player/Elements/Hydrogen.gd" id="1_xxcw6"]
+
+[node name="Hydrogen" type="Node2D"]
+script = ExtResource("1_xxcw6")
