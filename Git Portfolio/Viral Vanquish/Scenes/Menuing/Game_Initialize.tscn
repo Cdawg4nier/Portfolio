@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://crf7s2yg7rnhy"]
-
-[ext_resource type="Script" path="res://Scenes/Menuing/Game_Initialize.gd" id="1_yw5sr"]
-
-[node name="Game_Initialize" type="Node2D"]
-script = ExtResource("1_yw5sr")

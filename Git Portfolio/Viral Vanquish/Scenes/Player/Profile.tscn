@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://biqvslk6ya7y6"]
-
-[ext_resource type="Script" path="res://Scenes/Player/Profile.gd" id="1_f70ba"]
-
-[node name="Profile" type="Node"]
-script = ExtResource("1_f70ba")
